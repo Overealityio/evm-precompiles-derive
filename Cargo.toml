@@ -1,0 +1,24 @@
+[package]
+name = "evm-precompiles-derive"
+version = "0.2.1"
+authors = []
+edition = "2021"
+license = "MIT"
+description = "Utils to write EVM precompiles."
+homepage = "https://github.com/ccmlm/evm-precompiles-derive"
+repository = "https://github.com/ccmlm/evm-precompiles-derive.git"
+keywords = ["eth", "evm"]
+categories = ["data-structures", "algorithms"]
+
+[lib]
+proc-macro = true
+
+[[test]]
+name = "tests"
+path = "tests/tests.rs"
+
+[dependencies]
+quote = "1.0"
+proc-macro2 = "1.0"
+sha3 = { version = "0.10", default-features = false }
+syn = { version = "1.0", features = ["full", "fold", "extra-traits", "visit"] }
